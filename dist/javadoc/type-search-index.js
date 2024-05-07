@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"farmacia","l":"Medicamentos"},{"p":"farmacia","l":"NewJFrame"},{"p":"farmacia","l":"NewJFrame1"},{"p":"farmacia","l":"NewJFrame2"}];updateSearchResults();
