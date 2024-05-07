@@ -382,16 +382,13 @@ public class Principal extends javax.swing.JFrame {
     private void cantidadFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cantidadFocusLost
         // TODO add your handling code here:
         String input = cantidad.getText();
-        // Verifica si la entrada contiene solo números y su longitud no excede 4 caracteres
         if (input.matches("\\d+") && input.length() <= 4) {
-            // Aquí puedes realizar cualquier acción que necesites con el texto válido
             System.out.println("Texto válido: " + input);
             errCantidad.setText("");
         } else {
-            // Si la entrada no es válida, muestra un mensaje de error
             errCantidad.setForeground(Color.red);
             if (!input.matches("\\d+")) {
-                errCantidad.setText("Debe ser un número la cantidad");
+                errCantidad.setText("La cantidad debe de ser un número");
             } else {
                 errCantidad.setText("Introduzca una cantidad válida (máximo 4 dígitos)");
             }
@@ -402,8 +399,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cantidadFocusLost
 
     private void medicamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_medicamentoFocusLost
-        // TODO add your handling code here:
-        errCantidad.setText("");
+
+        if(medicamento.getText().length()>10){
+            errCantidad.setText("Demasiado largo");
+            medicamento.setText("");
+        }
+        if (medicamento.getText().matches(".*[^a-zA-Z].*")) {
+        errCantidad.setText("Contiene caracteres no permitidos");
+        medicamento.setText("");
+    }
     }//GEN-LAST:event_medicamentoFocusLost
 
     /**
