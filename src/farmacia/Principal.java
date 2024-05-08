@@ -24,16 +24,10 @@ public class Principal extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     static String medicina;
-    static String Quecantidad;
-    JPopupMenu popupMenu = new JPopupMenu();
 
     public Principal(String medincina, String cantidad) {
         initComponents();
 
-    }
-
-    private boolean esNumero(String texto) {
-        return texto.matches("\\d*");
     }
 
     /**
@@ -78,7 +72,8 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre medicamento");
 
-        TipoMedicamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Analgésico", "Analéptico", "Anestésico", "Antiácido", "Antidepresivo", "Antibióticos"}));
+        TipoMedicamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]
+         { "Seleccione", "Analgésico", "Analéptico", "Anestésico", "Antiácido", "Antidepresivo", "Antibióticos"}));
         TipoMedicamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoMedicamentoActionPerformed(evt);
@@ -177,11 +172,11 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(errCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(errCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(323, 323, 323)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -247,10 +242,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_TipoMedicamentoActionPerformed
 
     private void medicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamentoActionPerformed
-        // TODO add your handling code here:
         medicamento.setText(medicina);
-
-
     }//GEN-LAST:event_medicamentoActionPerformed
 
     private void cantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadActionPerformed
@@ -276,7 +268,6 @@ public class Principal extends javax.swing.JFrame {
 
 
     private void dist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dist1ActionPerformed
-
         if (dist1.isSelected()) {
             dist2.setSelected(false);
             dist3.setSelected(false);
@@ -287,7 +278,6 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_dist1ActionPerformed
 
     private void dist2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dist2ActionPerformed
-        // TODO add your handling code here:
         if (dist2.isSelected()) {
             dist1.setSelected(false);
             dist3.setSelected(false);
@@ -297,7 +287,6 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_dist2ActionPerformed
 
     private void dist3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dist3ActionPerformed
-        // TODO add your handling code here:
         if (dist3.isSelected()) {
             dist2.setSelected(false);
             dist1.setSelected(false);
@@ -324,7 +313,6 @@ public class Principal extends javax.swing.JFrame {
         } else {
             distribuidor = null;
         }
-
         if (Farm1.isSelected()) {
             farmacia = "Farmacia principal";
         } else if (Farm2.isSelected()) {
@@ -332,12 +320,21 @@ public class Principal extends javax.swing.JFrame {
         } else {
             farmacia = null; // Tratar el caso en que no se ha seleccionado una farmacia
         }
-
         if (medi.length() == 0) {
             errCantidad.setText("Debe de indicar un medicamento");
         } else if (canti.length() == 0) {
             errCantidad.setText("Debe de indicar una cantidad");
 
+        } else if (!canti.matches("\\d+")) {
+            errCantidad.setText("La cantidad debe de ser un número");
+        } else if (Integer.parseInt(canti) > 4) {
+            errCantidad.setText("Introduzca una cantidad válida (máximo 4 medicamentos)");
+        } else if (medicamento.getText().length() > 20) {
+            errCantidad.setText("Demasiado largo");
+            errCantidad.setForeground(Color.RED);
+        } else if (medicamento.getText().matches(".*[^a-zA-Z].*")) {
+            errCantidad.setText("El campo Medicamento contiene caracteres no permitidos");
+            errCantidad.setForeground(Color.RED);
         } else if (tipo.equals("Seleccione")) {
             errCantidad.setText("Debe de seleccionar un tipo");
         } else if (distribuidor == null) {
@@ -394,20 +391,12 @@ public class Principal extends javax.swing.JFrame {
             }
             cantidad.setSelectionColor(Color.red);
             cantidad.setText("");
-            
+
         }
     }//GEN-LAST:event_cantidadFocusLost
 
     private void medicamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_medicamentoFocusLost
 
-        if(medicamento.getText().length()>10){
-            errCantidad.setText("Demasiado largo");
-            medicamento.setText("");
-        }
-        if (medicamento.getText().matches(".*[^a-zA-Z].*")) {
-        errCantidad.setText("Contiene caracteres no permitidos");
-        medicamento.setText("");
-    }
     }//GEN-LAST:event_medicamentoFocusLost
 
     /**
