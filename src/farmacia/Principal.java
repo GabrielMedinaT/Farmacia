@@ -45,14 +45,14 @@ public class Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         cantidad = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        errCantidad = new javax.swing.JLabel();
+        mensajeError = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         dist1 = new javax.swing.JRadioButton();
         dist2 = new javax.swing.JRadioButton();
         dist3 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         Realizar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        botonSalir = new javax.swing.JButton();
         Farm1 = new javax.swing.JCheckBox();
         Farm2 = new javax.swing.JCheckBox();
 
@@ -72,8 +72,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre medicamento");
 
-        TipoMedicamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]
-         { "Seleccione", "Analgésico", "Analéptico", "Anestésico", "Antiácido", "Antidepresivo", "Antibióticos"}));
+        TipoMedicamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Analgésico", "Analéptico", "Anestésico", "Antiácido", "Antidepresivo", "Antibióticos"}));
         TipoMedicamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoMedicamentoActionPerformed(evt);
@@ -96,7 +95,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel3.setText("Cantidad");
 
-        errCantidad.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        mensajeError.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
 
         jLabel4.setText("Distribuidor");
 
@@ -128,10 +127,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botonSalirActionPerformed(evt);
             }
         });
 
@@ -175,12 +174,12 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(errCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(mensajeError, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(323, 323, 323)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton2)
+                                        .addComponent(botonSalir)
                                         .addGap(53, 53, 53)
                                         .addComponent(Realizar))
                                     .addGroup(layout.createSequentialGroup()
@@ -214,7 +213,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(10, 10, 10)
-                .addComponent(errCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mensajeError, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
@@ -228,7 +227,7 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Realizar)
-                    .addComponent(jButton2))
+                    .addComponent(botonSalir))
                 .addGap(27, 27, 27))
         );
 
@@ -246,23 +245,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_medicamentoActionPerformed
 
     private void cantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadActionPerformed
-        String input = cantidad.getText();
-        // Verifica si la entrada contiene solo números y su longitud no excede 4 caracteres
-        if (input.matches("\\d+") && input.length() <= 4) {
-            // Aquí puedes realizar cualquier acción que necesites con el texto válido
-            System.out.println("Texto válido: " + input);
-            errCantidad.setText("");
-        } else {
-            // Si la entrada no es válida, muestra un mensaje de error
-            errCantidad.setForeground(Color.red);
-            if (!input.matches("\\d+")) {
-                errCantidad.setText("Debe ser un número la cantidad");
-            } else {
-                errCantidad.setText("Introduzca una cantidad válida (máximo 4 dígitos)");
-            }
-            cantidad.setSelectionColor(Color.red);
-            cantidad.setText("");
-        }
+
 
     }//GEN-LAST:event_cantidadActionPerformed
 
@@ -273,7 +256,7 @@ public class Principal extends javax.swing.JFrame {
             dist3.setSelected(false);
             jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmacia/images/Cofarma.png")));
             cantidad.setBackground(Color.white);
-            errCantidad.setText("");
+            mensajeError.setText("");
         }
     }//GEN-LAST:event_dist1ActionPerformed
 
@@ -282,7 +265,7 @@ public class Principal extends javax.swing.JFrame {
             dist1.setSelected(false);
             dist3.setSelected(false);
             jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmacia/images/Empsephar.jpeg")));
-            errCantidad.setText("");
+            mensajeError.setText("");
         }
     }//GEN-LAST:event_dist2ActionPerformed
 
@@ -291,7 +274,7 @@ public class Principal extends javax.swing.JFrame {
             dist2.setSelected(false);
             dist1.setSelected(false);
             jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmacia/images/Cemefar.png")));
-            errCantidad.setText("");
+            mensajeError.setText("");
         }
     }//GEN-LAST:event_dist3ActionPerformed
 
@@ -300,7 +283,6 @@ public class Principal extends javax.swing.JFrame {
         final String medi = medicamento.getText();
         final String canti = cantidad.getText();
         final String tipo = TipoMedicamento.getSelectedItem().toString();
-
         String distribuidor;
         String farmacia;
 
@@ -313,41 +295,42 @@ public class Principal extends javax.swing.JFrame {
         } else {
             distribuidor = null;
         }
-        if (Farm1.isSelected()) {
-            farmacia = "Farmacia principal";
+        if ((Farm2.isSelected() && Farm1.isSelected())) {
+            farmacia = "Farmacia principal y secundaria ";
         } else if (Farm2.isSelected()) {
             farmacia = "Farmacia secundaria";
-        } else {
-            farmacia = null; // Tratar el caso en que no se ha seleccionado una farmacia
-        }
+        } else if (Farm1.isSelected()) {
+            farmacia = "Farmacia principal";
+        } else farmacia = null; 
+        
         if (medi.length() == 0) {
-            errCantidad.setText("Debe de indicar un medicamento");
+            mensajeError.setText("Debe de indicar un medicamento");
         } else if (canti.length() == 0) {
-            errCantidad.setText("Debe de indicar una cantidad");
+            mensajeError.setText("Debe de indicar una cantidad");
 
         } else if (!canti.matches("\\d+")) {
-            errCantidad.setText("La cantidad debe de ser un número");
+            mensajeError.setText("La cantidad debe de ser un número");
         } else if (Integer.parseInt(canti) > 4) {
-            errCantidad.setText("Introduzca una cantidad válida (máximo 4 medicamentos)");
+            mensajeError.setText("Introduzca una cantidad válida (máximo 4 medicamentos)");
         } else if (medicamento.getText().length() > 20) {
-            errCantidad.setText("Demasiado largo");
-            errCantidad.setForeground(Color.RED);
-        } else if (medicamento.getText().matches(".*[^a-zA-Z].*")) {
-            errCantidad.setText("El campo Medicamento contiene caracteres no permitidos");
-            errCantidad.setForeground(Color.RED);
+            mensajeError.setText("Demasiado largo el nombre del medicamento");
+            mensajeError.setForeground(Color.RED);
+        } else if (medicamento.getText().matches(".*[^a-zA-Z 0-9].*")) {
+            mensajeError.setText("El campo Medicamento contiene caracteres no permitidos");
+            mensajeError.setForeground(Color.RED);
         } else if (tipo.equals("Seleccione")) {
-            errCantidad.setText("Debe de seleccionar un tipo");
+            mensajeError.setText("Debe de seleccionar un tipo");
         } else if (distribuidor == null) {
-            errCantidad.setText("Debe seleccionar un distribuidor");
+            mensajeError.setText("Debe seleccionar un distribuidor");
         } else if (farmacia == null) {
-            errCantidad.setText("Debe seleccionar una farmacia");
-        } else if (errCantidad.getText().length() > 0) {
+            mensajeError.setText("Debe seleccionar una farmacia");
+        } else if (mensajeError.getText().length() > 0) {
 
         } else {
             dispose();
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    NewJFrame1 frame = new NewJFrame1(medi, canti, tipo, distribuidor, farmacia);
+                    VerificacionPedido frame = new VerificacionPedido(medi, canti, tipo, distribuidor, farmacia);
                     frame.setVisible(true);
 
                 }
@@ -358,45 +341,27 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_RealizarActionPerformed
 
     private void Farm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Farm1ActionPerformed
-        // TODO add your handling code here:
         if (Farm1.isSelected()) {
-            Farm2.setSelected(false);
+            mensajeError.setText("");
         }
     }//GEN-LAST:event_Farm1ActionPerformed
 
     private void Farm2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Farm2ActionPerformed
-        // TODO add your handling code here:
         if (Farm2.isSelected()) {
-            Farm1.setSelected(false);
+            mensajeError.setText("");
         }
     }//GEN-LAST:event_Farm2ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_botonSalirActionPerformed
 
     private void cantidadFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cantidadFocusLost
-        // TODO add your handling code here:
-        String input = cantidad.getText();
-        if (input.matches("\\d+") && input.length() <= 4) {
-            System.out.println("Texto válido: " + input);
-            errCantidad.setText("");
-        } else {
-            errCantidad.setForeground(Color.red);
-            if (!input.matches("\\d+")) {
-                errCantidad.setText("La cantidad debe de ser un número");
-            } else {
-                errCantidad.setText("Introduzca una cantidad válida (máximo 4 dígitos)");
-            }
-            cantidad.setSelectionColor(Color.red);
-            cantidad.setText("");
-
-        }
+        mensajeError.setText("");
     }//GEN-LAST:event_cantidadFocusLost
 
     private void medicamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_medicamentoFocusLost
-
+        mensajeError.setText("");
     }//GEN-LAST:event_medicamentoFocusLost
 
     /**
@@ -443,17 +408,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JCheckBox Farm2;
     private javax.swing.JButton Realizar;
     private javax.swing.JComboBox<String> TipoMedicamento;
+    private javax.swing.JButton botonSalir;
     private javax.swing.JTextField cantidad;
     private javax.swing.JRadioButton dist1;
     private javax.swing.JRadioButton dist2;
     private javax.swing.JRadioButton dist3;
-    private javax.swing.JLabel errCantidad;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField medicamento;
+    private javax.swing.JLabel mensajeError;
     // End of variables declaration//GEN-END:variables
 }

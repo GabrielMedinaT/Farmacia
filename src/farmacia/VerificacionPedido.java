@@ -5,7 +5,7 @@ package farmacia;
  *
  * @author gabriel
  */
-public class NewJFrame1 extends javax.swing.JFrame {
+public class VerificacionPedido extends javax.swing.JFrame {
 
     private String medicamento;
     private String cantidad;
@@ -16,7 +16,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame1
      */
-    public NewJFrame1(String medicamento, String cantidad, String tipo, String distribuidor, String farmacia) {
+    public VerificacionPedido(String medicamento, String cantidad, String tipo, String distribuidor, String farmacia) {
         this.medicamento = medicamento;
         this.cantidad = cantidad;
         this.tipo = tipo;
@@ -77,7 +77,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
         medicamentoEscogido2.setText("Tipo");
 
         medicamentoEscogido3.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido3.setText("Farmacia a recoger");
+        medicamentoEscogido3.setText("Farmacia");
 
         medicamentoEscogido4.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         medicamentoEscogido4.setText("Cantidad");
@@ -119,24 +119,24 @@ public class NewJFrame1 extends javax.swing.JFrame {
                     .addComponent(medicamentoEscogido5)
                     .addComponent(medicamentoEscogido3)
                     .addComponent(jToggleButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(medicamentoEscogido)
                     .addComponent(cantidadEscogida)
                     .addComponent(tipoEscogido)
                     .addComponent(distribuidoraEscogida)
                     .addComponent(farmaciaEscogida)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(123, 123, 123))
             .addGroup(layout.createSequentialGroup()
-                .addGap(312, 312, 312)
+                .addGap(272, 272, 272)
                 .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(medicamentoEscogido)
                     .addComponent(medicamentoEscogido1))
@@ -156,20 +156,20 @@ public class NewJFrame1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(farmaciaEscogida)
                     .addComponent(medicamentoEscogido3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton1)
                     .addComponent(jButton1))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
-                .addContainerGap())
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+        System.out.println("Pedido de " + cantidad + " " + medicamento + " del tipo "+ tipo + " de " + distribuidor + " para " + farmacia + "\nConfirmado");
         dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -214,14 +214,16 @@ public class NewJFrame1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerificacionPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerificacionPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerificacionPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerificacionPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+
         //</editor-fold>
 
         /* Create and display the form */
