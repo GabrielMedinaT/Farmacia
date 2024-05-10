@@ -13,6 +13,11 @@ public class VerificacionPedido extends javax.swing.JFrame {
     private String distribuidor;
     private String farmacia;
 
+        private Principal principal;
+
+    public void setPrincipal(Principal principal) {
+        this.principal = principal;
+    }
     /**
      * Creates new form NewJFrame1
      */
@@ -23,11 +28,11 @@ public class VerificacionPedido extends javax.swing.JFrame {
         this.distribuidor = distribuidor;
         this.farmacia = farmacia;
         initComponents();
-        medicamentoEscogido.setText(medicamento);
-        cantidadEscogida.setText(cantidad);
-        tipoEscogido.setText(tipo);
-        distribuidoraEscogida.setText(distribuidor);
-        farmaciaEscogida.setText(farmacia);
+        escogidoMedicamento.setText(medicamento);
+        escogidoCantidad.setText(cantidad);
+        escogidoTipo.setText(tipo);
+        escogidoDistribuidora.setText(distribuidor);
+        EscogidoFarmacia.setText(farmacia);
     }
 
     /**
@@ -39,51 +44,51 @@ public class VerificacionPedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        medicamentoEscogido = new javax.swing.JLabel();
-        cantidadEscogida = new javax.swing.JLabel();
-        tipoEscogido = new javax.swing.JLabel();
-        distribuidoraEscogida = new javax.swing.JLabel();
-        farmaciaEscogida = new javax.swing.JLabel();
-        medicamentoEscogido1 = new javax.swing.JLabel();
-        medicamentoEscogido2 = new javax.swing.JLabel();
-        medicamentoEscogido3 = new javax.swing.JLabel();
-        medicamentoEscogido4 = new javax.swing.JLabel();
-        medicamentoEscogido5 = new javax.swing.JLabel();
+        escogidoMedicamento = new javax.swing.JLabel();
+        escogidoCantidad = new javax.swing.JLabel();
+        escogidoTipo = new javax.swing.JLabel();
+        escogidoDistribuidora = new javax.swing.JLabel();
+        EscogidoFarmacia = new javax.swing.JLabel();
+        estaticoMedicamento = new javax.swing.JLabel();
+        estaticoTipo = new javax.swing.JLabel();
+        estaticoFarmacia = new javax.swing.JLabel();
+        estaticoCantidad = new javax.swing.JLabel();
+        estaticoDistribuidora = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        medicamentoEscogido.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido.setText("jLabel1");
+        escogidoMedicamento.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        escogidoMedicamento.setText("jLabel1");
 
-        cantidadEscogida.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        cantidadEscogida.setText("jLabel2");
+        escogidoCantidad.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        escogidoCantidad.setText("jLabel2");
 
-        tipoEscogido.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        tipoEscogido.setText("jLabel3");
+        escogidoTipo.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        escogidoTipo.setText("jLabel3");
 
-        distribuidoraEscogida.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        distribuidoraEscogida.setText("jLabel3");
+        escogidoDistribuidora.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        escogidoDistribuidora.setText("jLabel3");
 
-        farmaciaEscogida.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        farmaciaEscogida.setText("jLabel3");
+        EscogidoFarmacia.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        EscogidoFarmacia.setText("jLabel3");
 
-        medicamentoEscogido1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido1.setText("Medicamento");
+        estaticoMedicamento.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        estaticoMedicamento.setText("Medicamento");
 
-        medicamentoEscogido2.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido2.setText("Tipo");
+        estaticoTipo.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        estaticoTipo.setText("Tipo");
 
-        medicamentoEscogido3.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido3.setText("Farmacia");
+        estaticoFarmacia.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        estaticoFarmacia.setText("Farmacia");
 
-        medicamentoEscogido4.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido4.setText("Cantidad");
+        estaticoCantidad.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        estaticoCantidad.setText("Cantidad");
 
-        medicamentoEscogido5.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        medicamentoEscogido5.setText("Distribuidora");
+        estaticoDistribuidora.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        estaticoDistribuidora.setText("Distribuidora");
 
         jToggleButton1.setText("Confirmar pedido");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,19 +118,19 @@ public class VerificacionPedido extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(medicamentoEscogido4)
-                    .addComponent(medicamentoEscogido1)
-                    .addComponent(medicamentoEscogido2)
-                    .addComponent(medicamentoEscogido5)
-                    .addComponent(medicamentoEscogido3)
+                    .addComponent(estaticoCantidad)
+                    .addComponent(estaticoMedicamento)
+                    .addComponent(estaticoTipo)
+                    .addComponent(estaticoDistribuidora)
+                    .addComponent(estaticoFarmacia)
                     .addComponent(jToggleButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(medicamentoEscogido)
-                    .addComponent(cantidadEscogida)
-                    .addComponent(tipoEscogido)
-                    .addComponent(distribuidoraEscogida)
-                    .addComponent(farmaciaEscogida)
+                    .addComponent(escogidoMedicamento)
+                    .addComponent(escogidoCantidad)
+                    .addComponent(escogidoTipo)
+                    .addComponent(escogidoDistribuidora)
+                    .addComponent(EscogidoFarmacia)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(123, 123, 123))
             .addGroup(layout.createSequentialGroup()
@@ -138,24 +143,24 @@ public class VerificacionPedido extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(medicamentoEscogido)
-                    .addComponent(medicamentoEscogido1))
+                    .addComponent(escogidoMedicamento)
+                    .addComponent(estaticoMedicamento))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cantidadEscogida)
-                    .addComponent(medicamentoEscogido4))
+                    .addComponent(escogidoCantidad)
+                    .addComponent(estaticoCantidad))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tipoEscogido)
-                    .addComponent(medicamentoEscogido2))
+                    .addComponent(escogidoTipo)
+                    .addComponent(estaticoTipo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(medicamentoEscogido5)
-                    .addComponent(distribuidoraEscogida))
+                    .addComponent(estaticoDistribuidora)
+                    .addComponent(escogidoDistribuidora))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(farmaciaEscogida)
-                    .addComponent(medicamentoEscogido3))
+                    .addComponent(EscogidoFarmacia)
+                    .addComponent(estaticoFarmacia))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton1)
@@ -169,7 +174,8 @@ public class VerificacionPedido extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        System.out.println("Pedido de " + cantidad + " " + medicamento + " del tipo "+ tipo + " de " + distribuidor + " para " + farmacia + "\nConfirmado");
+        System.out.println("Pedido de " + cantidad + " " + medicamento + 
+                " del tipo "+ tipo + " de " + distribuidor + " para " + farmacia + "\nConfirmado");
         dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -179,17 +185,11 @@ public class VerificacionPedido extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
+       if (principal != null) {
+            principal.setVisible(true);
+        }
         dispose();
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal(medicamento, cantidad).setVisible(true);
-                System.out.println(medicamento
-                );
-                
-            }
-        });
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -231,18 +231,18 @@ public class VerificacionPedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel cantidadEscogida;
-    private javax.swing.JLabel distribuidoraEscogida;
-    private javax.swing.JLabel farmaciaEscogida;
+    private javax.swing.JLabel EscogidoFarmacia;
+    private javax.swing.JLabel escogidoCantidad;
+    private javax.swing.JLabel escogidoDistribuidora;
+    private javax.swing.JLabel escogidoMedicamento;
+    private javax.swing.JLabel escogidoTipo;
+    private javax.swing.JLabel estaticoCantidad;
+    private javax.swing.JLabel estaticoDistribuidora;
+    private javax.swing.JLabel estaticoFarmacia;
+    private javax.swing.JLabel estaticoMedicamento;
+    private javax.swing.JLabel estaticoTipo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JLabel medicamentoEscogido;
-    private javax.swing.JLabel medicamentoEscogido1;
-    private javax.swing.JLabel medicamentoEscogido2;
-    private javax.swing.JLabel medicamentoEscogido3;
-    private javax.swing.JLabel medicamentoEscogido4;
-    private javax.swing.JLabel medicamentoEscogido5;
-    private javax.swing.JLabel tipoEscogido;
     // End of variables declaration//GEN-END:variables
 }

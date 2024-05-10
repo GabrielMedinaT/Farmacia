@@ -15,7 +15,7 @@ public class NewJFrame2 extends javax.swing.JFrame {
     private Timer timer;
     public NewJFrame2() {
         initComponents();
-        timer = new Timer(5000, (ActionEvent e) -> {
+        timer = new Timer(15000, (ActionEvent e) -> {
             // Cerrar la ventana después de 5 segundos
             System.exit(0);
         });
@@ -40,7 +40,7 @@ public class NewJFrame2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 255, 0));
+        jLabel1.setForeground(new java.awt.Color(51, 102, 0));
         jLabel1.setText("Pedido Realizado, Gracias por su visita");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

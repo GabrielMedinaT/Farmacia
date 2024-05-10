@@ -26,20 +26,20 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="medicamentoEscogido4" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido1" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido3" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoCantidad" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoMedicamento" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoTipo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoDistribuidora" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoFarmacia" min="-2" max="-2" attributes="0"/>
                   <Component id="jToggleButton1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="266" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="medicamentoEscogido" min="-2" max="-2" attributes="0"/>
-                  <Component id="cantidadEscogida" min="-2" max="-2" attributes="0"/>
-                  <Component id="tipoEscogido" min="-2" max="-2" attributes="0"/>
-                  <Component id="distribuidoraEscogida" min="-2" max="-2" attributes="0"/>
-                  <Component id="farmaciaEscogida" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoMedicamento" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoCantidad" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoTipo" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoDistribuidora" min="-2" max="-2" attributes="0"/>
+                  <Component id="EscogidoFarmacia" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
@@ -56,28 +56,28 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="medicamentoEscogido" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoMedicamento" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoMedicamento" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cantidadEscogida" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tipoEscogido" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoTipo" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoTipo" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="medicamentoEscogido5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="distribuidoraEscogida" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoDistribuidora" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="escogidoDistribuidora" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="farmaciaEscogida" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicamentoEscogido3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EscogidoFarmacia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="estaticoFarmacia" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -92,7 +92,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="medicamentoEscogido">
+    <Component class="javax.swing.JLabel" name="escogidoMedicamento">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -100,7 +100,7 @@
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="cantidadEscogida">
+    <Component class="javax.swing.JLabel" name="escogidoCantidad">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -108,7 +108,7 @@
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="tipoEscogido">
+    <Component class="javax.swing.JLabel" name="escogidoTipo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -116,7 +116,7 @@
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="distribuidoraEscogida">
+    <Component class="javax.swing.JLabel" name="escogidoDistribuidora">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -124,7 +124,7 @@
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="farmaciaEscogida">
+    <Component class="javax.swing.JLabel" name="EscogidoFarmacia">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -132,7 +132,7 @@
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicamentoEscogido1">
+    <Component class="javax.swing.JLabel" name="estaticoMedicamento">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -140,7 +140,7 @@
         <Property name="text" type="java.lang.String" value="Medicamento"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicamentoEscogido2">
+    <Component class="javax.swing.JLabel" name="estaticoTipo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -148,7 +148,7 @@
         <Property name="text" type="java.lang.String" value="Tipo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicamentoEscogido3">
+    <Component class="javax.swing.JLabel" name="estaticoFarmacia">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -156,7 +156,7 @@
         <Property name="text" type="java.lang.String" value="Farmacia"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicamentoEscogido4">
+    <Component class="javax.swing.JLabel" name="estaticoCantidad">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
@@ -164,7 +164,7 @@
         <Property name="text" type="java.lang.String" value="Cantidad"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicamentoEscogido5">
+    <Component class="javax.swing.JLabel" name="estaticoDistribuidora">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="24" style="0"/>
